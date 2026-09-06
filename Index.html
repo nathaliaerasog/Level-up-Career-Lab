@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="#0a0a0c">
+
+<!--
+  SEO / GEO NOTE (updated 2026-09-05): domain confirmed as levelupcareerlab.com.
+  Brand name is now "Level Up Career Lab" — used in <title>, meta description,
+  Open Graph, Twitter Card, and JSON-LD organization/website/webpage names. The
+  nav/footer logo keeps the short "Level Up" wordmark with a "Career Lab"
+  sub-label for compactness; body copy still refers to it casually as
+  "Level Up". sitemap.xml, robots.txt and llms.txt use the same domain.
+-->
+
+<title>Level Up Career Lab — Strategic Career Advisory for Experienced Professionals</title>
+<meta name="description" content="Level Up Career Lab is a strategic career advisory for experienced professionals deciding their next move: promotion, industry change, board and advisory roles, independent consulting, or reinvention.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://levelupcareerlab.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Level Up Career Lab">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://levelupcareerlab.com/">
+<meta property="og:title" content="Level Up Career Lab — You've built the career. Now choose what plays next.">
+<meta property="og:description" content="Strategic career advisory for experienced professionals ready for their next defining move.">
+<!-- TODO: no image asset exists yet. Add a real 1200x630 OG image and uncomment: -->
+<!-- <meta property="og:image" content="https://levelupcareerlab.com/og-image.jpg"> -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Level Up Career Lab — Strategic Career Advisory">
+<meta name="twitter:description" content="Strategic career advisory for experienced professionals ready for their next defining move.">
+<!-- <meta name="twitter:image" content="https://levelupcareerlab.com/og-image.jpg"> -->
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0c'/%3E%3Crect x='30' y='58' width='10' height='22' rx='3' fill='%232FE87C'/%3E%3Crect x='45' y='40' width='10' height='40' rx='3' fill='%232FE87C'/%3E%3Crect x='60' y='24' width='10' height='56' rx='3' fill='%232FE87C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ---------- Design tokens ---------- */
+  :root{
+    --bg:#0a0a0c;
+    --bg-soft:#0d0d10;
+    --surface:#141416;
+    --surface-2:#1b1b1f;
+    --border:rgba(255,255,255,0.08);
+    --border-strong:rgba(255,255,255,0.14);
+    --text:#f4f4f6;
+    --text-dim:#a6a6ae;
+    --text-faint:#82828c;
+    --accent:#2FE87C;
+    --accent-strong:#4CFF98;
+    --accent-dim:rgba(47,232,124,0.14);
+    --accent-line:rgba(47,232,124,0.35);
+    --amber:#FFB454;
+    --violet:#9B8CFF;
+    --blue:#5BC8FF;
+    --container:1200px;
+    --font-display:'Sora',system-ui,sans-serif;
+    --font-body:'Inter',system-ui,sans-serif;
+    --ease:cubic-bezier(.16,.84,.44,1);
+    --dur-s:.4s;
+    --dur-m:.7s;
+    --dur-l:1.1s;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  @media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth;} }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  ::selection{background:var(--accent); color:#06120a;}
+
+  ::-webkit-scrollbar{width:10px;}
+  ::-webkit-scrollbar-track{background:var(--bg);}
+  ::-webkit-scrollbar-thumb{background:var(--surface-2); border-radius:10px; border:2px solid var(--bg);}
+  ::-webkit-scrollbar-thumb:hover{background:var(--accent-dim);}
+  html{scrollbar-color:var(--surface-2) var(--bg); scrollbar-width:thin;}
+
+  img{max-width:100%;}
+
+  a{color:inherit; text-decoration:none;}
+
+  h1,h2,h3,h4{
+    font-family:var(--font-display);
+    font-weight:700;
+    line-height:1.05;
+    margin:0;
+    letter-spacing:-0.02em;
+  }
+
+  p{margin:0;}
+
+  button{font-family:inherit; cursor:pointer;}
+
+  .container{
+    width:100%;
+    max-width:var(--container);
+    margin-inline:auto;
+    padding-inline:clamp(20px,5vw,48px);
+  }
+
+  .eyebrow{
+    font-family:var(--font-body);
+    font-size:.78rem;
+    font-weight:600;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:inline-flex;
+    align-items:center;
+    gap:.55em;
+  }
+  .eyebrow::before{
+    content:"";
+    width:7px;height:7px;border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 0 4px var(--accent-dim);
+  }
+
+  section{position:relative;}
+
+  .section-pad{padding-block:clamp(88px,12vw,168px);}
+
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;}
+
+  .skip-link{
+    position:absolute; left:12px; top:-60px;
+    background:var(--accent); color:#06120a;
+    padding:10px 16px; border-radius:8px; font-weight:600;
+    z-index:1000; transition:top .25s var(--ease);
+  }
+  .skip-link:focus{top:12px;}
+
+  /* ---------- Reveal system ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity var(--dur-m) var(--ease), transform var(--dur-m) var(--ease);
+    transition-delay:calc(var(--i,0) * 90ms);
+    will-change:opacity, transform;
+  }
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+  .reveal[data-anim="scale"]{transform:translateY(0) scale(.94);}
+  .reveal[data-anim="scale"].is-visible{transform:scale(1);}
+  .reveal[data-anim="left"]{transform:translateX(-32px);}
+  .reveal[data-anim="left"].is-visible{transform:translateX(0);}
+  .reveal[data-anim="right"]{transform:translateX(32px);}
+  .reveal[data-anim="right"].is-visible{transform:translateX(0);}
+  .reveal[data-anim="fade"]{transform:none;}
+
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1 !important; transform:none !important; transition:none !important;}
+  }
+
+  /* ---------- Top progress bar ---------- */
+  .scroll-progress{
+    position:fixed; top:0; left:0; right:0; height:3px;
+    background:transparent; z-index:900; pointer-events:none;
+  }
+  .scroll-progress__fill{
+    height:100%; width:0%;
+    background:linear-gradient(90deg,var(--accent),var(--accent-strong));
+    box-shadow:0 0 12px var(--accent-line);
+  }
+
+  /* ---------- Nav ---------- */
+  .site-nav{
+    position:fixed; top:3px; left:0; right:0; z-index:800;
+    padding:18px 0;
+    transition:background var(--dur-s) var(--ease), padding var(--dur-s) var(--ease), border-color var(--dur-s) var(--ease);
+    border-bottom:1px solid transparent;
+  }
+  .site-nav.is-scrolled{
+    background:rgba(10,10,12,0.72);
+    backdrop-filter:blur(14px) saturate(140%);
+    -webkit-backdrop-filter:blur(14px) saturate(140%);
+    padding:12px 0;
+    border-bottom-color:var(--border);
+  }
+  .nav-row{display:flex; align-items:center; justify-content:space-between; gap:24px;}
+  .nav-right{display:flex; align-items:center; gap:18px;}
+
+  .lang-switch{
+    display:inline-flex; align-items:center; gap:5px;
+    background:transparent; border:1px solid var(--border-strong); border-radius:999px;
+    padding:7px 12px; font-size:.8rem; font-weight:700; color:var(--text-faint);
+    font-family:var(--font-display); letter-spacing:.02em;
+    transition:border-color var(--dur-s) var(--ease);
+  }
+  .lang-switch:hover{border-color:var(--accent-line);}
+  .lang-switch span[data-lang-opt]{transition:color var(--dur-s) var(--ease); color:var(--text-faint);}
+  .lang-switch[data-active="en"] span[data-lang-opt="en"],
+  .lang-switch[data-active="es"] span[data-lang-opt="es"]{color:var(--accent);}
+  .brand{
+    font-family:var(--font-display); font-weight:800; font-size:1.15rem;
+    display:flex; align-items:center; gap:10px; letter-spacing:-.01em;
+  }
+  .brand-mark{
+    display:flex; align-items:flex-end; gap:3px; height:16px;
+  }
+  .brand-sub{
+    font-family:var(--font-body); font-weight:500; font-size:.62rem;
+    letter-spacing:.09em; text-transform:uppercase; color:var(--text-faint);
+    border-left:1px solid var(--border-strong); padding-left:8px; margin-left:2px;
+    white-space:nowrap;
+  }
+  .brand-mark span{
+    width:4px; background:var(--accent); border-radius:2px;
+    animation:eq 1.4s ease-in-out infinite;
+  }
+  .brand-mark span:nth-child(1){height:40%; animation-delay:-1.1s;}
+  .brand-mark span:nth-child(2){height:100%; animation-delay:-0.4s;}
+  .brand-mark span:nth-child(3){height:65%; animation-delay:-0.8s;}
+  @keyframes eq{0%,100%{transform:scaleY(.4);}50%{transform:scaleY(1);}}
+  @media (prefers-reduced-motion:reduce){ .brand-mark span{animation:none; height:70% !important;} }
+
+  .nav-links{display:flex; align-items:center; gap:32px; list-style:none; margin:0; padding:0;}
+  .nav-links a{
+    font-size:.92rem; font-weight:500; color:var(--text-dim);
+    position:relative; padding:4px 0; transition:color var(--dur-s) var(--ease);
+  }
+  .nav-links a::after{
+    content:""; position:absolute; left:0; bottom:-2px; height:2px; width:0;
+    background:var(--accent); transition:width var(--dur-s) var(--ease);
+  }
+  .nav-links a:hover, .nav-links a.is-active{color:var(--text);}
+  .nav-links a.is-active::after{width:100%;}
+
+  .btn{
+    display:inline-flex; align-items:center; gap:.5em;
+    font-weight:600; font-size:.94rem;
+    padding:13px 24px; border-radius:999px;
+    border:1px solid transparent;
+    transition:transform var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease), background var(--dur-s) var(--ease), border-color var(--dur-s) var(--ease);
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--accent); color:#06120a;}
+  .btn-primary:hover{background:var(--accent-strong); transform:translateY(-2px); box-shadow:0 10px 30px -8px var(--accent-line);}
+  .btn-ghost{background:transparent; color:var(--text); border-color:var(--border-strong);}
+  .btn-ghost:hover{border-color:var(--accent-line); background:var(--accent-dim); transform:translateY(-2px);}
+  .btn-sm{padding:10px 18px; font-size:.85rem;}
+
+  .nav-cta{display:none;}
+  @media (min-width:860px){ .nav-cta{display:inline-flex;} }
+
+  .nav-toggle{
+    display:inline-flex; background:none; border:1px solid var(--border-strong);
+    border-radius:10px; padding:9px; color:var(--text);
+  }
+  @media (min-width:860px){ .nav-toggle{display:none;} .nav-links{display:flex;} }
+  @media (max-width:859px){
+    .nav-links{
+      position:fixed; inset:64px 16px auto 16px; background:var(--surface);
+      border:1px solid var(--border); border-radius:16px; padding:18px;
+      flex-direction:column; align-items:flex-start; gap:6px;
+      opacity:0; visibility:hidden; pointer-events:none; transform:translateY(-8px);
+      transition:opacity var(--dur-s) var(--ease), transform var(--dur-s) var(--ease), visibility 0s linear var(--dur-s);
+    }
+    .nav-links.is-open{
+      opacity:1; visibility:visible; pointer-events:auto; transform:translateY(0);
+      transition:opacity var(--dur-s) var(--ease), transform var(--dur-s) var(--ease), visibility 0s linear 0s;
+    }
+    .nav-links a{padding:10px 8px; width:100%;}
+    .nav-links .btn{margin-top:8px; width:100%; justify-content:center;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh; display:flex; align-items:center;
+    padding-top:120px; padding-bottom:80px;
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 0%, rgba(47,232,124,0.10), transparent 60%),
+      radial-gradient(ellipse 50% 40% at 10% 100%, rgba(155,140,255,0.06), transparent 60%),
+      var(--bg);
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center;
+  }
+  @media (max-width:960px){ .hero-grid{grid-template-columns:1fr;} }
+
+  .hero h1{
+    font-size:clamp(2.6rem,6vw,5.2rem);
+    margin-top:22px;
+  }
+  .hero-sub{
+    margin-top:26px; max-width:44ch;
+    font-size:clamp(1.05rem,1.4vw,1.25rem); color:var(--text-dim);
+  }
+  .hero-ctas{display:flex; flex-wrap:wrap; gap:16px; margin-top:38px;}
+
+  .hero-visual{position:relative; height:min(60vh,520px);}
+  .eq-panel{
+    position:absolute; inset:0; border-radius:28px;
+    background:linear-gradient(160deg,var(--surface),var(--bg-soft));
+    border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+  .eq-panel::before{
+    content:""; position:absolute; inset:-40%;
+    background:radial-gradient(circle at 50% 50%, rgba(47,232,124,0.16), transparent 60%);
+  }
+  .eq-bars{display:flex; align-items:flex-end; gap:8px; height:46%; position:relative; z-index:1;}
+  .eq-bars span{
+    width:10px; border-radius:6px;
+    background:linear-gradient(180deg,var(--accent-strong),var(--accent));
+    animation:eqbar 2.2s ease-in-out infinite;
+  }
+  .eq-bars span:nth-child(1){height:35%; animation-delay:-2.1s;}
+  .eq-bars span:nth-child(2){height:70%; animation-delay:-1.8s;}
+  .eq-bars span:nth-child(3){height:100%; animation-delay:-1.4s;}
+  .eq-bars span:nth-child(4){height:55%; animation-delay:-1.0s;}
+  .eq-bars span:nth-child(5){height:85%; animation-delay:-0.6s;}
+  .eq-bars span:nth-child(6){height:45%; animation-delay:-0.2s;}
+  .eq-bars span:nth-child(7){height:65%; animation-delay:-1.6s;}
+  @keyframes eqbar{0%,100%{transform:scaleY(.3);}50%{transform:scaleY(1);}}
+  @media (prefers-reduced-motion:reduce){ .eq-bars span{animation:none;} }
+
+  .eq-caption{
+    position:absolute; bottom:24px; left:24px; right:24px;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:.78rem; color:var(--text-faint); z-index:1;
+  }
+  .eq-caption b{color:var(--text); font-weight:600;}
+
+  .scroll-cue{
+    position:absolute; left:50%; bottom:28px; transform:translateX(-50%);
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    color:var(--text-faint); font-size:.75rem; letter-spacing:.08em; text-transform:uppercase;
+  }
+  .scroll-cue__line{width:1px; height:34px; background:linear-gradient(var(--text-faint),transparent); position:relative; overflow:hidden;}
+  .scroll-cue__line::after{
+    content:""; position:absolute; top:-100%; left:0; width:100%; height:100%;
+    background:var(--accent); animation:cue 1.8s ease-in-out infinite;
+  }
+  @keyframes cue{0%{top:-100%;}60%{top:100%;}100%{top:100%;}}
+  @media (prefers-reduced-motion:reduce){ .scroll-cue__line::after{animation:none; top:0;} }
+
+  /* ---------- SECTION 02 — Playlist ---------- */
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .section-head h2{font-size:clamp(2rem,4.2vw,3.4rem); margin-top:16px;}
+  .section-head p{margin-top:18px; color:var(--text-dim); font-size:1.08rem;}
+
+  .tracklist{
+    border-top:1px solid var(--border);
+  }
+  .track{
+    display:grid; grid-template-columns:44px 1fr 28px; align-items:center; gap:20px;
+    padding:20px 18px; border-bottom:1px solid var(--border);
+    border-radius:12px;
+    transition:background var(--dur-s) var(--ease), padding-inline var(--dur-s) var(--ease);
+  }
+  .track:hover{background:var(--surface);}
+  .track-num{font-family:var(--font-display); font-weight:700; color:var(--text-faint); font-size:1.05rem;}
+  .track-title{font-weight:600; font-size:1.08rem;}
+  .track-icon{color:var(--text-faint); transition:color var(--dur-s) var(--ease), transform var(--dur-s) var(--ease);}
+  .track:hover .track-icon{color:var(--accent); transform:translateX(3px);}
+
+  .track--mystery{
+    border:1px dashed var(--border-strong); background:var(--bg-soft);
+  }
+  .track--mystery .track-num, .track--mystery .track-title{color:var(--text-faint);}
+  .track--mystery .track-title{position:relative;}
+  .track--mystery .q{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:26px; height:26px; border-radius:50%; background:var(--accent-dim);
+    color:var(--accent); font-family:var(--font-display); font-weight:700; font-size:.85rem;
+    animation:pulseq 2.4s ease-in-out infinite;
+  }
+  @keyframes pulseq{0%,100%{box-shadow:0 0 0 0 var(--accent-dim);}50%{box-shadow:0 0 0 8px transparent;}}
+  @media (prefers-reduced-motion:reduce){ .track--mystery .q{animation:none;} }
+
+  .tension-line{
+    margin-top:48px; font-family:var(--font-display); font-weight:600;
+    font-size:clamp(1.25rem,2.6vw,1.9rem); max-width:20ch; color:var(--text);
+    border-left:2px solid var(--accent); padding-left:22px;
+  }
+
+  /* ---------- SECTION 03 — Problem cards ---------- */
+  .card-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;
+  }
+  .path-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:20px;
+    padding:30px 26px; transition:transform var(--dur-s) var(--ease), border-color var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease);
+  }
+  .path-card:hover{
+    transform:translateY(-6px); border-color:var(--accent-line);
+    box-shadow:0 20px 40px -20px rgba(0,0,0,.6);
+  }
+  .path-card .idx{
+    font-family:var(--font-display); font-weight:700; color:var(--accent); font-size:.85rem;
+    letter-spacing:.06em;
+  }
+  .path-card h3{font-size:1.28rem; margin-top:14px;}
+  .path-card p{margin-top:10px; color:var(--text-dim); font-size:.96rem;}
+
+  /* ---------- SECTION 04 — Wrapped ---------- */
+  .wrapped{
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 0%, rgba(47,232,124,0.08), transparent 60%),
+      var(--bg-soft);
+    border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+  }
+  .wrapped-note{
+    display:inline-block; margin-top:18px; font-size:.82rem; color:var(--text-faint);
+    border:1px solid var(--border); padding:6px 12px; border-radius:999px;
+  }
+  .wrapped-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:18px;
+    margin-top:52px;
+  }
+  .wrap-card{
+    position:relative; overflow:hidden;
+    background:var(--surface); border:1px solid var(--border); border-radius:22px;
+    padding:34px 26px; min-height:190px;
+    display:flex; flex-direction:column; justify-content:flex-end;
+    transition:transform var(--dur-s) var(--ease);
+  }
+  .wrap-card:hover{transform:translateY(-4px);}
+  .wrap-card::before{
+    content:""; position:absolute; top:-30%; right:-30%; width:70%; height:70%;
+    border-radius:50%; filter:blur(30px); opacity:.35; z-index:0;
+  }
+  .wrap-card[data-tone="green"]::before{background:var(--accent);}
+  .wrap-card[data-tone="amber"]::before{background:var(--amber);}
+  .wrap-card[data-tone="violet"]::before{background:var(--violet);}
+  .wrap-card[data-tone="blue"]::before{background:var(--blue);}
+  .wrap-num{
+    font-family:var(--font-display); font-weight:800; line-height:1;
+    font-size:clamp(2.4rem,4.4vw,3.4rem); position:relative; z-index:1;
+  }
+  .wrap-label{margin-top:10px; color:var(--text-dim); font-size:.92rem; position:relative; z-index:1;}
+  .wrap-card--final{background:linear-gradient(160deg,var(--surface-2),var(--surface));}
+  .wrap-card--final .wrap-num{color:var(--accent);}
+
+  /* ---------- SECTION 05 — Method (sticky storytelling) ---------- */
+  .method-scroller{position:relative;}
+  .method-layout{
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px;
+  }
+  @media (max-width:860px){ .method-layout{grid-template-columns:1fr;} }
+  .method-sticky{
+    position:sticky; top:110px; align-self:start; height:fit-content;
+  }
+  .method-rail{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px;}
+  .method-rail li{
+    display:flex; align-items:baseline; gap:14px; padding:12px 0;
+    color:var(--text-faint); font-family:var(--font-display); font-weight:600;
+    border-left:2px solid var(--border); padding-left:18px;
+    transition:color var(--dur-s) var(--ease), border-color var(--dur-s) var(--ease);
+    font-size:1.05rem;
+  }
+  .method-rail li span{font-size:.8rem; opacity:.7;}
+  .method-rail li.is-active{color:var(--text); border-left-color:var(--accent);}
+  .method-rail li.is-active span{color:var(--accent); opacity:1;}
+
+  .method-steps{display:flex; flex-direction:column; gap:16px;}
+  .method-step{
+    min-height:60vh; display:flex; flex-direction:column; justify-content:center;
+    padding-block:24px; opacity:.3; transition:opacity var(--dur-m) var(--ease);
+  }
+  .method-step.is-active{opacity:1;}
+  @media (max-width:860px){
+    .method-step{min-height:auto; padding-block:20px; opacity:1;}
+    .method-sticky{position:static; margin-bottom:12px;}
+  }
+  .method-step .idx{font-family:var(--font-display); font-weight:700; color:var(--accent); font-size:.9rem;}
+  .method-step h3{font-size:clamp(1.6rem,3vw,2.3rem); margin-top:14px;}
+  .method-step p{margin-top:16px; color:var(--text-dim); font-size:1.08rem; max-width:48ch;}
+  @media (prefers-reduced-motion:reduce){ .method-step{opacity:1;} }
+
+  /* ---------- SECTION 06 — Catalogue ---------- */
+  .cat-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px;}
+  .cat-card{
+    position:relative; border-radius:22px; border:1px solid var(--border);
+    background:linear-gradient(160deg,var(--surface),var(--bg-soft));
+    padding:30px 26px; min-height:210px; overflow:hidden;
+    transition:border-color var(--dur-s) var(--ease), transform var(--dur-s) var(--ease);
+  }
+  .cat-card:hover, .cat-card:focus-within{transform:translateY(-6px); border-color:var(--accent-line);}
+  .cat-card h3{font-size:1.3rem; display:flex; align-items:center; justify-content:space-between;}
+  .cat-play{
+    width:38px; height:38px; border-radius:50%; background:var(--accent-dim);
+    display:flex; align-items:center; justify-content:center; color:var(--accent);
+    transition:transform var(--dur-s) var(--ease), background var(--dur-s) var(--ease);
+  }
+  .cat-card:hover .cat-play{transform:scale(1.1); background:var(--accent); color:#06120a;}
+  .cat-front{margin-top:14px; color:var(--text-dim); font-size:1rem;}
+  .cat-reveal{
+    margin-top:16px; padding-top:16px; border-top:1px solid var(--border);
+    color:var(--text-faint); font-size:.92rem;
+    max-height:0; opacity:0; overflow:hidden;
+    transition:max-height var(--dur-m) var(--ease), opacity var(--dur-m) var(--ease), margin-top var(--dur-m) var(--ease);
+  }
+  .cat-card:hover .cat-reveal, .cat-card:focus-within .cat-reveal{
+    max-height:160px; opacity:1;
+  }
+
+  /* ---------- SECTION 07.5 — Plans ---------- */
+  .plan-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px;
+    align-items:stretch;
+  }
+  .plan-card{
+    position:relative; display:flex; flex-direction:column;
+    background:var(--surface); border:1px solid var(--border); border-radius:22px;
+    padding:32px 28px; overflow:hidden;
+    transition:transform var(--dur-s) var(--ease), border-color var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease);
+  }
+  .plan-card::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:3px;
+    background:var(--accent);
+  }
+  .plan-card[data-tone="blue"]::before{background:var(--blue);}
+  .plan-card[data-tone="violet"]::before{background:var(--violet);}
+  .plan-card[data-tone="green"]::before{background:var(--accent);}
+  .plan-card:hover{transform:translateY(-6px); border-color:var(--accent-line); box-shadow:0 20px 40px -20px rgba(0,0,0,.6);}
+  .plan-card--featured{border-color:var(--accent-line); background:linear-gradient(160deg,var(--surface-2),var(--surface));}
+  .plan-tag{
+    font-family:var(--font-display); font-weight:700; font-size:.72rem;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint);
+  }
+  .plan-card h3{margin-top:12px; font-size:1.5rem;}
+  .plan-desc{margin-top:14px; color:var(--text-dim); font-size:.96rem; flex-grow:0;}
+  .plan-points{list-style:none; margin:20px 0 0; padding:0; display:flex; flex-direction:column; gap:10px;}
+  .plan-points li{
+    font-size:.88rem; color:var(--text-dim); padding-left:20px; position:relative;
+  }
+  .plan-points li::before{
+    content:""; position:absolute; left:0; top:.5em; width:7px; height:7px; border-radius:50%;
+    background:var(--accent);
+  }
+  .plan-card[data-tone="blue"] .plan-points li::before{background:var(--blue);}
+  .plan-card[data-tone="violet"] .plan-points li::before{background:var(--violet);}
+  .plan-cta{margin-top:26px; align-self:flex-start;}
+
+  /* ---------- SECTION 07 — Who this is for ---------- */
+  .who-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px;}
+  .who-card{
+    border:1px solid var(--border); border-radius:20px; padding:28px 22px;
+    background:var(--surface); transition:transform var(--dur-s) var(--ease), border-color var(--dur-s) var(--ease);
+  }
+  .who-card:hover{transform:translateY(-5px); border-color:var(--accent-line);}
+  .who-tag{
+    font-family:var(--font-display); font-weight:700; font-size:.72rem;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--text-faint);
+  }
+  .who-card h3{margin-top:10px; font-size:1.2rem;}
+  .who-card p{margin-top:10px; color:var(--text-dim); font-size:.95rem;}
+
+  /* ---------- SECTION 07.6 — FAQ ---------- */
+  .faq-list{display:flex; flex-direction:column; gap:12px;}
+  .faq-item{
+    border:1px solid var(--border); border-radius:16px; background:var(--surface);
+    padding:6px 24px; transition:border-color var(--dur-s) var(--ease);
+  }
+  .faq-item[open], .faq-item:hover{border-color:var(--accent-line);}
+  .faq-item summary{
+    list-style:none; cursor:pointer; padding:18px 28px 18px 0; position:relative;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary h3{
+    font-size:1.05rem; font-weight:600; font-family:var(--font-body); letter-spacing:0;
+  }
+  .faq-item summary::after{
+    content:"+"; position:absolute; right:0; top:50%; transform:translateY(-50%);
+    font-family:var(--font-display); font-size:1.3rem; color:var(--accent);
+    transition:transform var(--dur-s) var(--ease);
+  }
+  .faq-item[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+  .faq-item p{padding-bottom:20px; color:var(--text-dim); font-size:.96rem; max-width:65ch;}
+
+  /* ---------- SECTION 08 — Next Track ---------- */
+  .next-track{
+    background:radial-gradient(ellipse 60% 60% at 50% 40%, rgba(47,232,124,0.08), transparent 65%), var(--bg);
+    text-align:center;
+  }
+  .player{
+    max-width:520px; margin:0 auto; background:var(--surface);
+    border:1px solid var(--border); border-radius:24px; padding:38px 34px;
+  }
+  .player-art{
+    width:120px; height:120px; margin:0 auto 22px; border-radius:16px;
+    background:conic-gradient(from 210deg, var(--accent), var(--violet), var(--blue), var(--accent));
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 20px 50px -18px rgba(47,232,124,.35);
+  }
+  .player-art svg{width:38px; height:38px;}
+  .player-eyebrow{font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); font-weight:700;}
+  .player h3{margin-top:10px; font-size:1.6rem;}
+  .player .artist{margin-top:4px; color:var(--text-faint); font-size:.92rem;}
+  .player-bar{display:flex; align-items:center; gap:10px; margin-top:26px; font-size:.78rem; color:var(--text-faint); font-variant-numeric:tabular-nums;}
+  .player-track{flex:1; height:4px; background:var(--border-strong); border-radius:99px; position:relative;}
+  .player-track::before{content:""; position:absolute; left:0; top:0; height:100%; width:6%; background:var(--accent); border-radius:99px;}
+  .player-track::after{content:""; position:absolute; left:6%; top:50%; width:11px; height:11px; margin-left:-5px; margin-top:-5.5px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 5px var(--accent-dim);}
+  .player-copy{margin-top:34px; font-size:1.1rem; color:var(--text-dim); max-width:36ch; margin-inline:auto;}
+  .next-track .btn{margin-top:30px;}
+
+  /* ---------- SECTION 09 — Final CTA ---------- */
+  .final-cta{text-align:center;}
+  .final-cta h2{font-size:clamp(2.1rem,5vw,3.8rem); max-width:16ch; margin-inline:auto;}
+  .final-cta p{margin-top:20px; color:var(--text-dim); font-size:1.1rem;}
+  .final-cta .btn{margin-top:34px;}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--border); padding-block:44px;}
+  .footer-row{display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; align-items:center;}
+  .footer-links{display:flex; gap:22px; list-style:none; padding:0; margin:0; flex-wrap:wrap;}
+  .footer-links a{color:var(--text-faint); font-size:.88rem; transition:color var(--dur-s) var(--ease);}
+  .footer-links a:hover{color:var(--text);}
+  .footer-fine{color:var(--text-faint); font-size:.82rem; margin-top:18px;}
+
+  .parallax{will-change:transform;}
+</style>
+
+<!--
+  STRUCTURED DATA (JSON-LD entity graph).
+  All @id values are anchored to the placeholder domain above and linked to each
+  other so this reads as one graph, not isolated blocks. Nothing here is invented:
+  every field is drawn from copy that also appears in the visible page (see the
+  matching FAQ section further down for the FAQPage entity). Fields that would
+  require real business facts we don't have (logo, address, founder/Person,
+  areaServed) are intentionally omitted rather than filled with placeholder text —
+  see the "Missing Information" notes for what to add once available.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://levelupcareerlab.com/#organization",
+      "name": "Level Up Career Lab",
+      "alternateName": "Level Up",
+      "url": "https://levelupcareerlab.com/",
+      "email": "hello@levelupcareerlab.com",
+      "description": "Strategic career advisory for experienced professionals deciding, positioning, and executing their next career move.",
+      "knowsAbout": [
+        "Executive career strategy",
+        "Career transition strategy",
+        "Executive positioning",
+        "Board and advisory career transitions",
+        "Independent consulting transitions",
+        "Early-career strategy",
+        "Job search strategy"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://levelupcareerlab.com/#website",
+      "url": "https://levelupcareerlab.com/",
+      "name": "Level Up Career Lab",
+      "inLanguage": "en-US",
+      "publisher": { "@id": "https://levelupcareerlab.com/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://levelupcareerlab.com/#webpage",
+      "url": "https://levelupcareerlab.com/",
+      "name": "Level Up Career Lab — Strategic Career Advisory for Experienced Professionals",
+      "description": "Level Up Career Lab is a strategic career advisory for experienced professionals deciding their next move: promotion, industry change, board and advisory roles, independent consulting, or reinvention.",
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://levelupcareerlab.com/#website" },
+      "about": { "@id": "https://levelupcareerlab.com/#organization" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://levelupcareerlab.com/#service-underdog",
+      "name": "Underdog Plan — Early-Career Strategy",
+      "description": "Career direction, skill-building priorities, and personal positioning for people at the beginning of their career.",
+      "provider": { "@id": "https://levelupcareerlab.com/#organization" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://levelupcareerlab.com/#service-sherpa",
+      "name": "Sherpa Plan — Job Search Strategy",
+      "description": "Job search strategy, positioning, and interview narrative for professionals currently between jobs.",
+      "provider": { "@id": "https://levelupcareerlab.com/#organization" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://levelupcareerlab.com/#service-executive",
+      "name": "Executive Plan — Executive Career Strategy",
+      "description": "Strategic advisory for experienced professionals deciding and executing their next move: promotion, industry change, independent consulting, board and advisory roles, or reinvention.",
+      "provider": { "@id": "https://levelupcareerlab.com/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://levelupcareerlab.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is executive career advisory?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Executive career advisory is strategic work focused on deciding what your next career move should be — and how to position and execute it — rather than generic interview or resume coaching. It starts from your existing professional capital and maps the realistic paths it can open." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is career advisory different from career coaching?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Career coaching typically helps with skills like interviewing, networking, or resume writing. Career strategy addresses an earlier question: which direction is worth pursuing at all. For experienced professionals, the harder problem is usually deciding, not executing." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it too late to change careers in your 40s or 50s?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Rarely, from a capability standpoint. What changes with experience is the type of transition that makes sense — a senior professional's accumulated expertise, network, results, and reputation usually transfers better through repositioning than through starting over." }
+        },
+        {
+          "@type": "Question",
+          "name": "How can an executive transition into independent consulting?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The transition works best when it starts from a clear view of which parts of your operating experience are in demand as advisory value, not from repackaging a job title. That typically means defining a narrow expertise area, building a positioning narrative, and using an existing network before any market outreach." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do executives find board or advisory positions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Board and advisory roles are rarely won through open applications — they're built through visible expertise, existing relationships, and a clear point of view in a specific domain. Combining an operating role with board or advisory work is often the realistic first step, rather than a full-time board career." }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do if my career has plateaued?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A plateau is often a career inflection point rather than a dead end: a moment where continuing on inertia has a real opportunity cost. The useful first step is mapping your accumulated professional capital and the options it currently supports, before deciding on a direction." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I identify which parts of my experience are transferable to a new industry?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Focus on what generalizes: leadership scope, the type of problems you've solved, and measurable results — rather than industry-specific terminology. Industry knowledge is real value, but it's rarely the only value a senior professional carries between sectors." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="skip-link">Skip to content</a>
+
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__fill" id="scrollFill"></div></div>
+
+<header class="site-nav" id="siteNav">
+  <div class="container nav-row">
+    <a class="brand" href="#hero" data-i18n="brand-aria" data-i18n-attr="aria-label" aria-label="Level Up Career Lab — home">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="brand-name">Level&nbsp;Up</span><span class="brand-sub">Career Lab</span>
+    </a>
+    <div class="nav-right">
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#career" data-i18n="nav-career">Your Career</a></li>
+          <li><a href="#method" data-i18n="nav-method">The Method</a></li>
+          <li><a href="#catalogue" data-i18n="nav-catalogue">Catalogue</a></li>
+          <li><a href="#who" data-i18n="nav-who">Who It's For</a></li>
+          <li><a href="#plans" data-i18n="nav-plans">Plans</a></li>
+          <li><a href="#faq" data-i18n="nav-faq">FAQ</a></li>
+          <li><a class="btn btn-primary btn-sm" href="#cta" data-i18n="nav-book">Book a Session</a></li>
+        </ul>
+      </nav>
+      <button class="lang-switch" id="langSwitch" type="button" data-active="en" data-i18n="lang-switch-aria" data-i18n-attr="aria-label" aria-label="Switch language / Cambiar idioma">
+        <span data-lang-opt="en">EN</span><span aria-hidden="true">/</span><span data-lang-opt="es">ES</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" data-i18n="nav-toggle-aria" data-i18n-attr="aria-label" aria-label="Toggle menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 01 — HERO -->
+  <section class="hero" id="hero" aria-label="Introduction">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow reveal" data-anim="fade" data-i18n="hero-eyebrow">Strategic Career Advisory</span>
+        <h1 class="reveal" data-anim="fade" style="--i:1" data-i18n="hero-h1">You've built the career.<br>Now choose what plays next.</h1>
+        <p class="hero-sub reveal" data-anim="fade" style="--i:2" data-i18n="hero-sub">Strategic career advisory for experienced professionals ready for their next defining move.</p>
+        <div class="hero-ctas reveal" data-anim="fade" style="--i:3">
+          <a class="btn btn-primary" href="#career" data-i18n="hero-cta-primary">Discover your next move →</a>
+          <a class="btn btn-ghost" href="#method" data-i18n="hero-cta-ghost">How it works</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal" data-anim="scale" style="--i:2">
+        <div class="eq-panel">
+          <div class="eq-bars" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="eq-caption">
+            <span data-i18n="hero-eq-label">NOW SHAPING</span>
+            <b data-i18n="hero-eq-b">Your Next Chapter</b>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span class="scroll-cue__line"></span><span data-i18n="scroll-cue">Scroll</span></div>
+  </section>
+
+  <!-- 01.5 — OVERVIEW (answer-first summary; not hidden behind interaction or JS) -->
+  <section class="section-pad" id="overview" aria-labelledby="overview-h">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade">
+        <span class="eyebrow" data-i18n="overview-eyebrow">What Level Up Does</span>
+        <h2 id="overview-h" data-i18n="overview-h">Strategic career advisory for experienced professionals.</h2>
+        <p data-i18n="overview-p">Level Up helps professionals decide, position, and execute their next career move — strategy work focused on which direction is worth pursuing, not generic interview coaching. There's a plan for each career moment: <a href="#plans">Underdog</a> for people starting their careers, <a href="#plans">Sherpa</a> for people between jobs, and <a href="#plans">Executive</a> for experienced professionals aiming for greater seniority and income.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="path-card reveal" data-anim="scale" style="--i:0">
+          <span class="idx" data-i18n="overview-card1-idx">Method</span>
+          <h3 data-i18n="overview-card1-h3">How it works</h3>
+          <p data-i18n="overview-card1-p">A five-step process — <a href="#method">Decode, Position, Explore, Design, Execute</a> — that turns accumulated experience into a deliberate next move.</p>
+        </article>
+        <article class="path-card reveal" data-anim="scale" style="--i:1">
+          <span class="idx" data-i18n="overview-card2-idx">Difference</span>
+          <h3 data-i18n="overview-card2-h3">Strategy, not coaching</h3>
+          <p data-i18n="overview-card2-p">Career coaching helps you interview better. Career strategy answers the earlier question: which direction is worth pursuing at all.</p>
+        </article>
+        <article class="path-card reveal" data-anim="scale" style="--i:2">
+          <span class="idx" data-i18n="overview-card3-idx">Scope</span>
+          <h3 data-i18n="overview-card3-h3">What it covers</h3>
+          <p data-i18n="overview-card3-p">Promotion into <a href="#who">executive roles</a>, changing industries, <a href="#catalogue">board and advisory positions</a>, independent consulting, or a full reinvention.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 — YOUR CAREER SO FAR -->
+  <section class="section-pad" id="career" aria-labelledby="career-h">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade">
+        <span class="eyebrow" data-i18n="career-eyebrow">Recognition</span>
+        <h2 id="career-h" data-i18n="career-h">Your career wasn't random.</h2>
+        <p data-i18n="career-p">Every role, every hard decision, every stretch assignment — it built toward something. Here's the shape of it so far.</p>
+      </div>
+
+      <ol class="tracklist" role="list">
+        <li class="track reveal" data-anim="left" style="--i:0">
+          <span class="track-num">01</span>
+          <span class="track-title" data-i18n="career-track1">First leadership role</span>
+          <svg class="track-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </li>
+        <li class="track reveal" data-anim="left" style="--i:1">
+          <span class="track-num">02</span>
+          <span class="track-title" data-i18n="career-track2">Built a team</span>
+          <svg class="track-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </li>
+        <li class="track reveal" data-anim="left" style="--i:2">
+          <span class="track-num">03</span>
+          <span class="track-title" data-i18n="career-track3">Became the expert</span>
+          <svg class="track-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </li>
+        <li class="track reveal" data-anim="left" style="--i:3">
+          <span class="track-num">04</span>
+          <span class="track-title" data-i18n="career-track4">Led through change</span>
+          <svg class="track-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </li>
+        <li class="track reveal" data-anim="left" style="--i:4">
+          <span class="track-num">05</span>
+          <span class="track-title" data-i18n="career-track5">Reached the senior level</span>
+          <svg class="track-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </li>
+        <li class="track track--mystery reveal" data-anim="left" style="--i:5">
+          <span class="track-num">06</span>
+          <span class="track-title"><span class="q" aria-hidden="true">?</span> <span style="margin-left:10px;" data-i18n="career-track6">To be decided</span></span>
+          <span></span>
+        </li>
+      </ol>
+
+      <p class="tension-line reveal" data-anim="fade" data-i18n="career-tension">The hardest career decision often comes at a career inflection point — after you've already become successful.</p>
+    </div>
+  </section>
+
+  <!-- 03 — THE PROBLEM -->
+  <section class="section-pad" id="problem" aria-labelledby="problem-h">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade">
+        <span class="eyebrow" data-i18n="problem-eyebrow">Tension</span>
+        <h2 id="problem-h" data-i18n="problem-h">Experience gives you more options.<br>Not necessarily more clarity.</h2>
+        <p data-i18n="problem-p">The problem was never a lack of opportunity. It's career optionality — the range of directions your experience can support — and choosing strategically between them.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="path-card reveal" data-anim="scale" style="--i:0">
+          <span class="idx">01</span>
+          <h3 data-i18n="path1-h3">Move Up</h3>
+          <p data-i18n="path1-p">Target a C-level or executive role.</p>
+        </article>
+        <article class="path-card reveal" data-anim="scale" style="--i:1">
+          <span class="idx">02</span>
+          <h3 data-i18n="path2-h3">Move Across</h3>
+          <p data-i18n="path2-p">Enter a new industry without starting over.</p>
+        </article>
+        <article class="path-card reveal" data-anim="scale" style="--i:2">
+          <span class="idx">03</span>
+          <h3 data-i18n="path3-h3">Build Something</h3>
+          <p data-i18n="path3-p">Turn your expertise into an independent business.</p>
+        </article>
+        <article class="path-card reveal" data-anim="scale" style="--i:3">
+          <span class="idx">04</span>
+          <h3 data-i18n="path4-h3">Join the Board</h3>
+          <p data-i18n="path4-p">Translate operating experience into advisory value.</p>
+        </article>
+        <article class="path-card reveal" data-anim="scale" style="--i:4">
+          <span class="idx">05</span>
+          <h3 data-i18n="path5-h3">Reinvent</h3>
+          <p data-i18n="path5-p">Design a completely different professional chapter.</p>
+        </article>
+      </div>
+
+      <p class="tension-line reveal" data-anim="fade" data-i18n="problem-tension">Increasingly, the answer isn't one of these paths alone but a career portfolio — an executive role combined with board work, advisory projects, or teaching.</p>
+    </div>
+  </section>
+
+  <!-- 04 — CAREER WRAPPED -->
+  <section class="section-pad wrapped" id="wrapped" aria-labelledby="wrapped-h">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade">
+        <span class="eyebrow" data-i18n="wrapped-eyebrow">Possibility</span>
+        <h2 id="wrapped-h" data-i18n="wrapped-h">20 years of experience is data.<br>We help you read it.</h2>
+        <p data-i18n="wrapped-p">Your track record is professional capital — the combination of expertise, leadership, results, network, and reputation you've built — and it already holds the answer to what should come next. Most people have just never had it decoded.</p>
+        <span class="wrapped-note" data-i18n="wrapped-note">Illustrative example — yours is built from your own career data</span>
+      </div>
+
+      <div class="wrapped-grid">
+        <div class="wrap-card reveal" data-anim="scale" data-tone="green" style="--i:0">
+          <div class="wrap-num" data-counter data-target="18">0</div>
+          <div class="wrap-label" data-i18n="wrap-label1">Years Experience</div>
+        </div>
+        <div class="wrap-card reveal" data-anim="scale" data-tone="blue" style="--i:1">
+          <div class="wrap-num" data-counter data-target="4">0</div>
+          <div class="wrap-label" data-i18n="wrap-label2">Industries</div>
+        </div>
+        <div class="wrap-card reveal" data-anim="scale" data-tone="amber" style="--i:2">
+          <div class="wrap-num" data-counter data-target="11">0</div>
+          <div class="wrap-label" data-i18n="wrap-label3">Years Leading Teams</div>
+        </div>
+        <div class="wrap-card reveal" data-anim="scale" data-tone="violet" style="--i:3">
+          <div class="wrap-num" data-counter data-target="3">0</div>
+          <div class="wrap-label" data-i18n="wrap-label4">Career Inflection Points</div>
+        </div>
+        <div class="wrap-card wrap-card--final reveal" data-anim="scale" style="--i:4">
+          <div class="wrap-num" data-counter data-target="1">0</div>
+          <div class="wrap-label" data-i18n="wrap-label5">Next Move</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 — OUR METHOD -->
+  <section class="section-pad method-scroller" id="method" aria-labelledby="method-h">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade">
+        <span class="eyebrow" data-i18n="method-eyebrow">Method</span>
+        <h2 id="method-h" data-i18n="method-h">Build your next career chapter deliberately.</h2>
+      </div>
+
+      <div class="method-layout">
+        <div class="method-sticky">
+          <ul class="method-rail" id="methodRail">
+            <li data-step="0" class="is-active"><span>01</span> <span data-i18n="method-rail0">Decode</span></li>
+            <li data-step="1"><span>02</span> <span data-i18n="method-rail1">Position</span></li>
+            <li data-step="2"><span>03</span> <span data-i18n="method-rail2">Explore</span></li>
+            <li data-step="3"><span>04</span> <span data-i18n="method-rail3">Design</span></li>
+            <li data-step="4"><span>05</span> <span data-i18n="method-rail4">Execute</span></li>
+          </ul>
+        </div>
+
+        <div class="method-steps" id="methodSteps">
+          <div class="method-step is-active" data-step="0">
+            <span class="idx" data-i18n="method-step0-idx">01 — Decode</span>
+            <h3 data-i18n="method-step0-h3">Map what you actually have.</h3>
+            <p data-i18n="method-step0-p">Map your experience, achievements, reputation and professional capital.</p>
+          </div>
+          <div class="method-step" data-step="1">
+            <span class="idx" data-i18n="method-step1-idx">02 — Position</span>
+            <h3 data-i18n="method-step1-h3">Find where it's worth the most.</h3>
+            <p data-i18n="method-step1-p">Identify where your background creates disproportionate value.</p>
+          </div>
+          <div class="method-step" data-step="2">
+            <span class="idx" data-i18n="method-step2-idx">03 — Explore</span>
+            <h3 data-i18n="method-step2-h3">See the real paths, not just the obvious one.</h3>
+            <p data-i18n="method-step2-p">Compare realistic career paths and opportunities.</p>
+          </div>
+          <div class="method-step" data-step="3">
+            <span class="idx" data-i18n="method-step3-idx">04 — Design</span>
+            <h3 data-i18n="method-step3-h3">Build the case for your next move.</h3>
+            <p data-i18n="method-step3-p">Build the positioning, narrative and strategy for your chosen direction.</p>
+          </div>
+          <div class="method-step" data-step="4">
+            <span class="idx" data-i18n="method-step4-idx">05 — Execute</span>
+            <h3 data-i18n="method-step4-h3">Turn strategy into offers.</h3>
+            <p data-i18n="method-step4-p">Turn strategy into conversations, opportunities and offers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 — YOUR PROFESSIONAL CATALOGUE -->
+  <section class="section-pad" id="catalogue" aria-labelledby="catalogue-h">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade">
+        <span class="eyebrow" data-i18n="catalogue-eyebrow">Credibility</span>
+        <h2 id="catalogue-h" data-i18n="catalogue-h">Your professional catalogue.</h2>
+        <p data-i18n="catalogue-p">Everything you've built has value beyond your current role. Hover to see how it plays into your next one.</p>
+      </div>
+
+      <div class="cat-grid">
+        <div class="cat-card reveal" data-anim="scale" style="--i:0" tabindex="0">
+          <h3><span data-i18n="cat1-h3">Leadership</span> <span class="cat-play" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></h3>
+          <p class="cat-front" data-i18n="cat1-front">What you've led.</p>
+          <p class="cat-reveal" data-i18n="cat1-reveal">Teams, functions, and budgets — the scope of your responsibility, made visible.</p>
+        </div>
+        <div class="cat-card reveal" data-anim="scale" style="--i:1" tabindex="0">
+          <h3><span data-i18n="cat2-h3">Expertise</span> <span class="cat-play" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></h3>
+          <p class="cat-front" data-i18n="cat2-front">What you know unusually well.</p>
+          <p class="cat-reveal" data-i18n="cat2-reveal">The specific knowledge that took a decade to earn — and can't be picked up in a weekend.</p>
+        </div>
+        <div class="cat-card reveal" data-anim="scale" style="--i:2" tabindex="0">
+          <h3><span data-i18n="cat3-h3">Results</span> <span class="cat-play" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></h3>
+          <p class="cat-front" data-i18n="cat3-front">What you've actually changed.</p>
+          <p class="cat-reveal" data-i18n="cat3-reveal">The measurable shifts you're responsible for — growth, transformation, turnarounds.</p>
+        </div>
+        <div class="cat-card reveal" data-anim="scale" style="--i:3" tabindex="0">
+          <h3><span data-i18n="cat4-h3">Network</span> <span class="cat-play" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></h3>
+          <p class="cat-front" data-i18n="cat4-front">Who knows your work.</p>
+          <p class="cat-reveal" data-i18n="cat4-reveal">The relationships that open doors — built over years, not requests.</p>
+        </div>
+        <div class="cat-card reveal" data-anim="scale" style="--i:4" tabindex="0">
+          <h3><span data-i18n="cat5-h3">Reputation</span> <span class="cat-play" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></h3>
+          <p class="cat-front" data-i18n="cat5-front">What people associate with you.</p>
+          <p class="cat-reveal" data-i18n="cat5-reveal">The reputation you didn't design on purpose — but that precedes you in every room.</p>
+        </div>
+        <div class="cat-card reveal" data-anim="scale" style="--i:5" tabindex="0">
+          <h3><span data-i18n="cat6-h3">Optionality</span> <span class="cat-play" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></h3>
+          <p class="cat-front" data-i18n="cat6-front">Where all of this could take you next.</p>
+          <p class="cat-reveal" data-i18n="cat6-reveal">The paths your experience has quietly created — most of which you haven't considered yet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 — WHO THIS IS FOR -->
+  <section class="section-pad" id="who" aria-labelledby="who-h">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade">
+        <span class="eyebrow" data-i18n="who-eyebrow">Fit</span>
+        <h2 id="who-h" data-i18n="who-h">Wherever your career stands, there's a path.</h2>
+        <p data-i18n="who-p">Starting out, in between jobs, or ready to climb higher — Level Up meets you at your exact moment. Here's who we typically work with under the Executive plan.</p>
+      </div>
+
+      <div class="who-grid">
+        <div class="who-card reveal" data-anim="scale" style="--i:0">
+          <span class="who-tag" data-i18n="who-tag">Profile</span>
+          <h3 data-i18n="who1-h3">The Executive</h3>
+          <p data-i18n="who1-p">Ready for the next leadership level.</p>
+        </div>
+        <div class="who-card reveal" data-anim="scale" style="--i:1">
+          <span class="who-tag" data-i18n="who-tag">Profile</span>
+          <h3 data-i18n="who2-h3">The Operator</h3>
+          <p data-i18n="who2-p">Considering advisory or board roles.</p>
+        </div>
+        <div class="who-card reveal" data-anim="scale" style="--i:2">
+          <span class="who-tag" data-i18n="who-tag">Profile</span>
+          <h3 data-i18n="who3-h3">The Expert</h3>
+          <p data-i18n="who3-p">Turning specialized knowledge into greater leverage.</p>
+        </div>
+        <div class="who-card reveal" data-anim="scale" style="--i:3">
+          <span class="who-tag" data-i18n="who-tag">Profile</span>
+          <h3 data-i18n="who4-h3">The Reinventor</h3>
+          <p data-i18n="who4-p">Ready to change industries or professional identity.</p>
+        </div>
+        <div class="who-card reveal" data-anim="scale" style="--i:4">
+          <span class="who-tag" data-i18n="who-tag">Profile</span>
+          <h3 data-i18n="who5-h3">The Builder</h3>
+          <p data-i18n="who5-p">Considering independent consulting or entrepreneurship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07.5 — PLANS -->
+  <section class="section-pad" id="plans" aria-labelledby="plans-h">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade">
+        <span class="eyebrow" data-i18n="plans-eyebrow">Plans</span>
+        <h2 id="plans-h" data-i18n="plans-h">Three plans. One for wherever you stand.</h2>
+        <p data-i18n="plans-p">Level Up isn't one-size-fits-all. Pick the plan built for your exact moment in your career.</p>
+      </div>
+
+      <div class="plan-grid">
+        <article class="plan-card reveal" data-anim="scale" data-tone="blue" style="--i:0">
+          <span class="plan-tag" data-i18n="plan1-tag">For those just starting out</span>
+          <h3>Underdog</h3>
+          <p class="plan-desc" data-i18n="plan1-desc">Not for seniors — for people at the very beginning of their career. Get clarity on direction, the skills worth prioritizing, and how to position yourself from day one.</p>
+          <ul class="plan-points">
+            <li data-i18n="plan1-point1">Career direction & first moves</li>
+            <li data-i18n="plan1-point2">Skill-building priorities</li>
+            <li data-i18n="plan1-point3">Personal positioning from scratch</li>
+          </ul>
+          <a class="btn btn-ghost btn-sm plan-cta" href="mailto:hello@levelupcareerlab.com?subject=Underdog%20plan" data-i18n="plan1-cta">Start as an Underdog →</a>
+        </article>
+
+        <article class="plan-card reveal" data-anim="scale" data-tone="violet" style="--i:1">
+          <span class="plan-tag" data-i18n="plan2-tag">For those in between jobs</span>
+          <h3>Sherpa</h3>
+          <p class="plan-desc" data-i18n="plan2-desc">For people without a job right now who are working to land one. A guide through the search — sharpening your story, targeting the right roles, and moving with intention until you land.</p>
+          <ul class="plan-points">
+            <li data-i18n="plan2-point1">Job search strategy & targeting</li>
+            <li data-i18n="plan2-point2">Positioning & narrative for interviews</li>
+            <li data-i18n="plan2-point3">Momentum until you land the offer</li>
+          </ul>
+          <a class="btn btn-ghost btn-sm plan-cta" href="mailto:hello@levelupcareerlab.com?subject=Sherpa%20plan" data-i18n="plan2-cta">Start as a Sherpa →</a>
+        </article>
+
+        <article class="plan-card plan-card--featured reveal" data-anim="scale" data-tone="green" style="--i:2">
+          <span class="plan-tag" data-i18n="plan3-tag">For those ready to climb higher</span>
+          <h3>Executive</h3>
+          <p class="plan-desc" data-i18n="plan3-desc">For experienced professionals with a job today who want to grow seniority and income. Strategic advisory to decide — and land — your next defining move.</p>
+          <ul class="plan-points">
+            <li data-i18n="plan3-point1">Seniority & compensation growth</li>
+            <li data-i18n="plan3-point2">Strategic positioning for the next level</li>
+            <li data-i18n="plan3-point3">The full Level Up method, end to end</li>
+          </ul>
+          <a class="btn btn-primary btn-sm plan-cta" href="mailto:hello@levelupcareerlab.com?subject=Executive%20plan" data-i18n="plan3-cta">Start as an Executive →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07.6 — FAQ (visible, plain HTML, matches the FAQPage JSON-LD in <head>) -->
+  <section class="section-pad" id="faq" aria-labelledby="faq-h">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade">
+        <span class="eyebrow" data-i18n="faq-eyebrow">FAQ</span>
+        <h2 id="faq-h" data-i18n="faq-h">Common questions about career strategy.</h2>
+        <p data-i18n="faq-p">Straight answers to what experienced professionals usually ask before their first session.</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item reveal" data-anim="fade">
+          <summary><h3 data-i18n="faq1-q">What is executive career advisory?</h3></summary>
+          <p data-i18n="faq1-a">Executive career advisory is strategic work focused on deciding what your next career move should be — and how to position and execute it — rather than generic interview or resume coaching. It starts from your existing professional capital and maps the realistic paths it can open.</p>
+        </details>
+        <details class="faq-item reveal" data-anim="fade">
+          <summary><h3 data-i18n="faq2-q">How is career advisory different from career coaching?</h3></summary>
+          <p data-i18n="faq2-a">Career coaching typically helps with skills like interviewing, networking, or resume writing. Career strategy addresses an earlier question: which direction is worth pursuing at all. For experienced professionals, the harder problem is usually deciding, not executing.</p>
+        </details>
+        <details class="faq-item reveal" data-anim="fade">
+          <summary><h3 data-i18n="faq3-q">Is it too late to change careers in your 40s or 50s?</h3></summary>
+          <p data-i18n="faq3-a">Rarely, from a capability standpoint. What changes with experience is the type of transition that makes sense — a senior professional's accumulated expertise, network, results, and reputation usually transfers better through repositioning than through starting over.</p>
+        </details>
+        <details class="faq-item reveal" data-anim="fade">
+          <summary><h3 data-i18n="faq4-q">How can an executive transition into independent consulting?</h3></summary>
+          <p data-i18n="faq4-a">The transition works best when it starts from a clear view of which parts of your operating experience are in demand as advisory value, not from repackaging a job title. That typically means defining a narrow expertise area, building a positioning narrative, and using an existing network before any market outreach.</p>
+        </details>
+        <details class="faq-item reveal" data-anim="fade">
+          <summary><h3 data-i18n="faq5-q">How do executives find board or advisory positions?</h3></summary>
+          <p data-i18n="faq5-a">Board and advisory roles are rarely won through open applications — they're built through visible expertise, existing relationships, and a clear point of view in a specific domain. Combining an operating role with board or advisory work is often the realistic first step, rather than a full-time board career.</p>
+        </details>
+        <details class="faq-item reveal" data-anim="fade">
+          <summary><h3 data-i18n="faq6-q">What should I do if my career has plateaued?</h3></summary>
+          <p data-i18n="faq6-a">A plateau is often a career inflection point rather than a dead end: a moment where continuing on inertia has a real opportunity cost. The useful first step is mapping your accumulated professional capital and the options it currently supports, before deciding on a direction.</p>
+        </details>
+        <details class="faq-item reveal" data-anim="fade">
+          <summary><h3 data-i18n="faq7-q">How do I identify which parts of my experience are transferable to a new industry?</h3></summary>
+          <p data-i18n="faq7-a">Focus on what generalizes: leadership scope, the type of problems you've solved, and measurable results — rather than industry-specific terminology. Industry knowledge is real value, but it's rarely the only value a senior professional carries between sectors.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07.7 — ABOUT (E-E-A-T scaffold — replace the placeholder before publishing) -->
+  <section class="section-pad" id="about" aria-labelledby="about-h">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade">
+        <span class="eyebrow" data-i18n="about-eyebrow">About</span>
+        <h2 id="about-h" data-i18n="about-h">Who's behind Level Up</h2>
+        <p data-i18n="about-p">[PLACEHOLDER — add the advisor's or team's name, professional background, relevant credentials, and location here. This is what lets both readers and AI systems evaluate the credibility of the advice on this site — see the "Missing Information" notes for what's needed.]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 — THE NEXT TRACK -->
+  <section class="section-pad next-track" id="next-track" aria-labelledby="next-track-h">
+    <div class="container">
+      <h2 id="next-track-h" class="reveal" data-anim="fade" style="font-size:clamp(1.6rem,3vw,2.2rem); margin-bottom:44px;" data-i18n="next-track-h">The climax of your career story is unwritten.</h2>
+
+      <div class="player reveal" data-anim="scale">
+        <div class="player-art" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#06120a" stroke-width="2"><path d="M8 5v14l11-7z" fill="#06120a"/></svg>
+        </div>
+        <div class="player-eyebrow" data-i18n="player-eyebrow">Now Playing</div>
+        <h3 data-i18n="player-h3">Your Next Chapter</h3>
+        <div class="artist" data-i18n="player-artist">Unknown destination</div>
+        <div class="player-bar" aria-hidden="true">
+          <span>00:00</span>
+          <span class="player-track"></span>
+          <span>--:--</span>
+        </div>
+      </div>
+
+      <p class="player-copy reveal" data-anim="fade" data-i18n="player-copy">You don't need to know exactly where you're going.<br>You need a better process for deciding.</p>
+      <a class="btn btn-primary reveal" data-anim="fade" href="#cta" data-i18n="next-track-cta">Start your career strategy →</a>
+    </div>
+  </section>
+
+  <!-- 09 — FINAL CTA -->
+  <section class="section-pad final-cta" id="cta" aria-labelledby="cta-h">
+    <div class="container">
+      <h2 id="cta-h" class="reveal" data-anim="fade" data-i18n="cta-h">Your experience got you here.<br>Strategy determines what comes next.</h2>
+      <p class="reveal" data-anim="fade" style="--i:1" data-i18n="cta-p">One conversation to map the paths your career has already earned you.</p>
+      <a class="btn btn-primary reveal" data-anim="fade" style="--i:2" href="mailto:hello@levelupcareerlab.com?subject=Strategic%20career%20session" data-i18n="cta-btn">Book a strategic career session</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-row">
+      <a class="brand" href="#hero" style="font-size:1rem;" data-i18n="brand-aria" data-i18n-attr="aria-label" aria-label="Level Up Career Lab — home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-name">Level&nbsp;Up</span><span class="brand-sub">Career Lab</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="#career" data-i18n="nav-career">Your Career</a></li>
+        <li><a href="#method" data-i18n="nav-method">The Method</a></li>
+        <li><a href="#catalogue" data-i18n="nav-catalogue">Catalogue</a></li>
+        <li><a href="#who" data-i18n="nav-who">Who It's For</a></li>
+        <li><a href="#plans" data-i18n="nav-plans">Plans</a></li>
+        <li><a href="#faq" data-i18n="nav-faq">FAQ</a></li>
+        <li><a href="#about" data-i18n="nav-about">About</a></li>
+        <li><a href="mailto:hello@levelupcareerlab.com">hello@levelupcareerlab.com</a></li>
+      </ul>
+    </div>
+    <p class="footer-fine">&copy; <span id="year"></span> <span data-i18n="footer-copy">Level Up. Strategic career advisory for experienced professionals.</span></p>
+    <p class="footer-fine" data-i18n="footer-reviewed">Content last reviewed: September 2026.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---- i18n: EN / ES ----
+     Every data-i18n key below has a matching element in the HTML. Values may
+     contain inline markup (<br>, <a>) since this is static, author-controlled
+     copy — applyLang() writes it with innerHTML, not user input. */
+  var I18N = {
+    '_title': { en: "Level Up Career Lab — Strategic Career Advisory for Experienced Professionals", es: "Level Up Career Lab — Asesoría Estratégica de Carrera para Profesionales con Experiencia" },
+    '_meta-description': { en: "Level Up Career Lab is a strategic career advisory for experienced professionals deciding their next move: promotion, industry change, board and advisory roles, independent consulting, or reinvention.", es: "Level Up Career Lab es una asesoría estratégica de carrera para profesionales con experiencia que deciden su próximo paso: ascenso, cambio de industria, roles de consejo y advisory, consultoría independiente o reinvención." },
+
+    'lang-switch-aria': { en: "Switch language / Cambiar idioma", es: "Cambiar idioma / Switch language" },
+    'nav-toggle-aria': { en: "Toggle menu", es: "Abrir menú" },
+    'brand-aria': { en: "Level Up Career Lab — home", es: "Level Up Career Lab — inicio" },
+    'skip-link': { en: "Skip to content", es: "Saltar al contenido" },
+
+    'nav-career': { en: "Your Career", es: "Tu Carrera" },
+    'nav-method': { en: "The Method", es: "El Método" },
+    'nav-catalogue': { en: "Catalogue", es: "Catálogo" },
+    'nav-who': { en: "Who It's For", es: "Para Quién Es" },
+    'nav-plans': { en: "Plans", es: "Planes" },
+    'nav-faq': { en: "FAQ", es: "Preguntas Frecuentes" },
+    'nav-about': { en: "About", es: "Acerca de" },
+    'nav-book': { en: "Book a Session", es: "Agenda una Sesión" },
+
+    'hero-eyebrow': { en: "Strategic Career Advisory", es: "Asesoría Estratégica de Carrera" },
+    'hero-h1': { en: "You've built the career.<br>Now choose what plays next.", es: "Ya construiste la carrera.<br>Ahora elige qué sigue." },
+    'hero-sub': { en: "Strategic career advisory for experienced professionals ready for their next defining move.", es: "Asesoría estratégica de carrera para profesionales con experiencia listos para su próximo movimiento decisivo." },
+    'hero-cta-primary': { en: "Discover your next move →", es: "Descubre tu próximo movimiento →" },
+    'hero-cta-ghost': { en: "How it works", es: "Cómo funciona" },
+    'hero-eq-label': { en: "NOW SHAPING", es: "AHORA DEFINIENDO" },
+    'hero-eq-b': { en: "Your Next Chapter", es: "Tu Próximo Capítulo" },
+    'scroll-cue': { en: "Scroll", es: "Desplázate" },
+
+    'overview-eyebrow': { en: "What Level Up Does", es: "Qué Hace Level Up" },
+    'overview-h': { en: "Strategic career advisory for experienced professionals.", es: "Asesoría estratégica de carrera para profesionales con experiencia." },
+    'overview-p': { en: 'Level Up helps professionals decide, position, and execute their next career move — strategy work focused on which direction is worth pursuing, not generic interview coaching. There\'s a plan for each career moment: <a href="#plans">Underdog</a> for people starting their careers, <a href="#plans">Sherpa</a> for people between jobs, and <a href="#plans">Executive</a> for experienced professionals aiming for greater seniority and income.', es: 'Level Up ayuda a profesionales a decidir, posicionar y ejecutar su próximo movimiento de carrera — trabajo estratégico enfocado en qué dirección vale la pena seguir, no coaching genérico de entrevistas. Hay un plan para cada momento de carrera: <a href="#plans">Underdog</a> para quienes empiezan su carrera, <a href="#plans">Sherpa</a> para quienes están entre trabajos, y <a href="#plans">Executive</a> para profesionales con experiencia que buscan mayor seniority e ingresos.' },
+    'overview-card1-idx': { en: "Method", es: "Método" },
+    'overview-card1-h3': { en: "How it works", es: "Cómo funciona" },
+    'overview-card1-p': { en: 'A five-step process — <a href="#method">Decode, Position, Explore, Design, Execute</a> — that turns accumulated experience into a deliberate next move.', es: 'Un proceso de cinco pasos — <a href="#method">Decodificar, Posicionar, Explorar, Diseñar, Ejecutar</a> — que convierte la experiencia acumulada en un próximo movimiento deliberado.' },
+    'overview-card2-idx': { en: "Difference", es: "Diferencia" },
+    'overview-card2-h3': { en: "Strategy, not coaching", es: "Estrategia, no coaching" },
+    'overview-card2-p': { en: "Career coaching helps you interview better. Career strategy answers the earlier question: which direction is worth pursuing at all.", es: "El coaching de carrera te ayuda a entrevistarte mejor. La estrategia de carrera responde una pregunta anterior: qué dirección vale la pena seguir." },
+    'overview-card3-idx': { en: "Scope", es: "Alcance" },
+    'overview-card3-h3': { en: "What it covers", es: "Qué cubre" },
+    'overview-card3-p': { en: 'Promotion into <a href="#who">executive roles</a>, changing industries, <a href="#catalogue">board and advisory positions</a>, independent consulting, or a full reinvention.', es: 'Ascenso a <a href="#who">roles ejecutivos</a>, cambio de industria, <a href="#catalogue">posiciones de consejo y advisory</a>, consultoría independiente, o una reinvención completa.' },
+
+    'career-eyebrow': { en: "Recognition", es: "Reconocimiento" },
+    'career-h': { en: "Your career wasn't random.", es: "Tu carrera no fue casualidad." },
+    'career-p': { en: "Every role, every hard decision, every stretch assignment — it built toward something. Here's the shape of it so far.", es: "Cada rol, cada decisión difícil, cada reto asumido — construyó hacia algo. Esta es la forma que ha tomado hasta ahora." },
+    'career-track1': { en: "First leadership role", es: "Primer rol de liderazgo" },
+    'career-track2': { en: "Built a team", es: "Construiste un equipo" },
+    'career-track3': { en: "Became the expert", es: "Te convertiste en el experto" },
+    'career-track4': { en: "Led through change", es: "Lideraste el cambio" },
+    'career-track5': { en: "Reached the senior level", es: "Llegaste al nivel senior" },
+    'career-track6': { en: "To be decided", es: "Por decidir" },
+    'career-tension': { en: "The hardest career decision often comes at a career inflection point — after you've already become successful.", es: "La decisión de carrera más difícil suele llegar en un punto de inflexión — después de que ya lograste el éxito." },
+
+    'problem-eyebrow': { en: "Tension", es: "Tensión" },
+    'problem-h': { en: "Experience gives you more options.<br>Not necessarily more clarity.", es: "La experiencia te da más opciones.<br>No necesariamente más claridad." },
+    'problem-p': { en: "The problem was never a lack of opportunity. It's career optionality — the range of directions your experience can support — and choosing strategically between them.", es: "El problema nunca fue falta de oportunidades. Es la opcionalidad de carrera — el rango de direcciones que tu experiencia puede sostener — y elegir estratégicamente entre ellas." },
+    'path1-h3': { en: "Move Up", es: "Ascender" },
+    'path1-p': { en: "Target a C-level or executive role.", es: "Apunta a un rol ejecutivo o de C-level." },
+    'path2-h3': { en: "Move Across", es: "Cambiar de Industria" },
+    'path2-p': { en: "Enter a new industry without starting over.", es: "Entra a una nueva industria sin empezar de cero." },
+    'path3-h3': { en: "Build Something", es: "Construir Algo Propio" },
+    'path3-p': { en: "Turn your expertise into an independent business.", es: "Convierte tu expertise en un negocio independiente." },
+    'path4-h3': { en: "Join the Board", es: "Unirte a un Consejo" },
+    'path4-p': { en: "Translate operating experience into advisory value.", es: "Traduce tu experiencia operativa en valor de advisory." },
+    'path5-h3': { en: "Reinvent", es: "Reinventarte" },
+    'path5-p': { en: "Design a completely different professional chapter.", es: "Diseña un capítulo profesional completamente distinto." },
+    'problem-tension': { en: "Increasingly, the answer isn't one of these paths alone but a career portfolio — an executive role combined with board work, advisory projects, or teaching.", es: "Cada vez más, la respuesta no es uno de estos caminos por separado sino un portafolio de carrera — un rol ejecutivo combinado con consejos, proyectos de advisory, o docencia." },
+
+    'wrapped-eyebrow': { en: "Possibility", es: "Posibilidad" },
+    'wrapped-h': { en: "20 years of experience is data.<br>We help you read it.", es: "20 años de experiencia son datos.<br>Te ayudamos a leerlos." },
+    'wrapped-p': { en: "Your track record is professional capital — the combination of expertise, leadership, results, network, and reputation you've built — and it already holds the answer to what should come next. Most people have just never had it decoded.", es: "Tu trayectoria es capital profesional — la combinación de expertise, liderazgo, resultados, red de contactos y reputación que has construido — y ya contiene la respuesta a qué debería seguir. La mayoría simplemente nunca lo ha decodificado." },
+    'wrapped-note': { en: "Illustrative example — yours is built from your own career data", es: "Ejemplo ilustrativo — el tuyo se construye con los datos de tu propia carrera" },
+    'wrap-label1': { en: "Years Experience", es: "Años de Experiencia" },
+    'wrap-label2': { en: "Industries", es: "Industrias" },
+    'wrap-label3': { en: "Years Leading Teams", es: "Años Liderando Equipos" },
+    'wrap-label4': { en: "Career Inflection Points", es: "Puntos de Inflexión de Carrera" },
+    'wrap-label5': { en: "Next Move", es: "Próximo Movimiento" },
+
+    'method-eyebrow': { en: "Method", es: "Método" },
+    'method-h': { en: "Build your next career chapter deliberately.", es: "Construye tu próximo capítulo de carrera de forma deliberada." },
+    'method-rail0': { en: "Decode", es: "Decodificar" },
+    'method-rail1': { en: "Position", es: "Posicionar" },
+    'method-rail2': { en: "Explore", es: "Explorar" },
+    'method-rail3': { en: "Design", es: "Diseñar" },
+    'method-rail4': { en: "Execute", es: "Ejecutar" },
+    'method-step0-idx': { en: "01 — Decode", es: "01 — Decodificar" },
+    'method-step0-h3': { en: "Map what you actually have.", es: "Mapea lo que realmente tienes." },
+    'method-step0-p': { en: "Map your experience, achievements, reputation and professional capital.", es: "Mapea tu experiencia, logros, reputación y capital profesional." },
+    'method-step1-idx': { en: "02 — Position", es: "02 — Posicionar" },
+    'method-step1-h3': { en: "Find where it's worth the most.", es: "Encuentra dónde vale más." },
+    'method-step1-p': { en: "Identify where your background creates disproportionate value.", es: "Identifica dónde tu trayectoria crea un valor desproporcionado." },
+    'method-step2-idx': { en: "03 — Explore", es: "03 — Explorar" },
+    'method-step2-h3': { en: "See the real paths, not just the obvious one.", es: "Mira los caminos reales, no solo el obvio." },
+    'method-step2-p': { en: "Compare realistic career paths and opportunities.", es: "Compara caminos y oportunidades de carrera realistas." },
+    'method-step3-idx': { en: "04 — Design", es: "04 — Diseñar" },
+    'method-step3-h3': { en: "Build the case for your next move.", es: "Construye el caso para tu próximo movimiento." },
+    'method-step3-p': { en: "Build the positioning, narrative and strategy for your chosen direction.", es: "Construye el posicionamiento, la narrativa y la estrategia para la dirección elegida." },
+    'method-step4-idx': { en: "05 — Execute", es: "05 — Ejecutar" },
+    'method-step4-h3': { en: "Turn strategy into offers.", es: "Convierte la estrategia en ofertas." },
+    'method-step4-p': { en: "Turn strategy into conversations, opportunities and offers.", es: "Convierte la estrategia en conversaciones, oportunidades y ofertas." },
+
+    'catalogue-eyebrow': { en: "Credibility", es: "Credibilidad" },
+    'catalogue-h': { en: "Your professional catalogue.", es: "Tu catálogo profesional." },
+    'catalogue-p': { en: "Everything you've built has value beyond your current role. Hover to see how it plays into your next one.", es: "Todo lo que has construido tiene valor más allá de tu rol actual. Pasa el cursor para ver cómo influye en el próximo." },
+    'cat1-h3': { en: "Leadership", es: "Liderazgo" },
+    'cat1-front': { en: "What you've led.", es: "Lo que has liderado." },
+    'cat1-reveal': { en: "Teams, functions, and budgets — the scope of your responsibility, made visible.", es: "Equipos, funciones y presupuestos — el alcance de tu responsabilidad, hecho visible." },
+    'cat2-h3': { en: "Expertise", es: "Expertise" },
+    'cat2-front': { en: "What you know unusually well.", es: "Lo que sabes excepcionalmente bien." },
+    'cat2-reveal': { en: "The specific knowledge that took a decade to earn — and can't be picked up in a weekend.", es: "El conocimiento específico que tomó una década ganar — y que no se adquiere en un fin de semana." },
+    'cat3-h3': { en: "Results", es: "Resultados" },
+    'cat3-front': { en: "What you've actually changed.", es: "Lo que realmente has cambiado." },
+    'cat3-reveal': { en: "The measurable shifts you're responsible for — growth, transformation, turnarounds.", es: "Los cambios medibles de los que eres responsable — crecimiento, transformación, recuperaciones." },
+    'cat4-h3': { en: "Network", es: "Red de Contactos" },
+    'cat4-front': { en: "Who knows your work.", es: "Quién conoce tu trabajo." },
+    'cat4-reveal': { en: "The relationships that open doors — built over years, not requests.", es: "Las relaciones que abren puertas — construidas durante años, no con solicitudes." },
+    'cat5-h3': { en: "Reputation", es: "Reputación" },
+    'cat5-front': { en: "What people associate with you.", es: "Lo que la gente asocia contigo." },
+    'cat5-reveal': { en: "The reputation you didn't design on purpose — but that precedes you in every room.", es: "La reputación que no diseñaste a propósito — pero que te precede en cada sala." },
+    'cat6-h3': { en: "Optionality", es: "Opcionalidad" },
+    'cat6-front': { en: "Where all of this could take you next.", es: "A dónde puede llevarte todo esto." },
+    'cat6-reveal': { en: "The paths your experience has quietly created — most of which you haven't considered yet.", es: "Los caminos que tu experiencia ha creado silenciosamente — la mayoría de los cuales aún no has considerado." },
+
+    'who-eyebrow': { en: "Fit", es: "Encaje" },
+    'who-h': { en: "Wherever your career stands, there's a path.", es: "Donde sea que esté tu carrera, hay un camino." },
+    'who-p': { en: "Starting out, in between jobs, or ready to climb higher — Level Up meets you at your exact moment. Here's who we typically work with under the Executive plan.", es: "Empezando, entre trabajos, o listo para subir de nivel — Level Up te encuentra en tu momento exacto. Así son las personas con las que solemos trabajar en el plan Executive." },
+    'who-tag': { en: "Profile", es: "Perfil" },
+    'who1-h3': { en: "The Executive", es: "El Ejecutivo" },
+    'who1-p': { en: "Ready for the next leadership level.", es: "Listo para el siguiente nivel de liderazgo." },
+    'who2-h3': { en: "The Operator", es: "El Operador" },
+    'who2-p': { en: "Considering advisory or board roles.", es: "Considerando roles de advisory o consejo." },
+    'who3-h3': { en: "The Expert", es: "El Experto" },
+    'who3-p': { en: "Turning specialized knowledge into greater leverage.", es: "Convirtiendo conocimiento especializado en mayor apalancamiento." },
+    'who4-h3': { en: "The Reinventor", es: "El Reinventor" },
+    'who4-p': { en: "Ready to change industries or professional identity.", es: "Listo para cambiar de industria o identidad profesional." },
+    'who5-h3': { en: "The Builder", es: "El Constructor" },
+    'who5-p': { en: "Considering independent consulting or entrepreneurship.", es: "Considerando consultoría independiente o emprendimiento." },
+
+    'plans-eyebrow': { en: "Plans", es: "Planes" },
+    'plans-h': { en: "Three plans. One for wherever you stand.", es: "Tres planes. Uno para donde sea que estés." },
+    'plans-p': { en: "Level Up isn't one-size-fits-all. Pick the plan built for your exact moment in your career.", es: "Level Up no es talla única. Elige el plan construido para tu momento exacto de carrera." },
+    'plan1-tag': { en: "For those just starting out", es: "Para quienes están empezando" },
+    'plan1-desc': { en: "Not for seniors — for people at the very beginning of their career. Get clarity on direction, the skills worth prioritizing, and how to position yourself from day one.", es: "No es para seniors — es para personas al comienzo de su carrera. Gana claridad sobre tu dirección, qué habilidades priorizar, y cómo posicionarte desde el día uno." },
+    'plan1-point1': { en: "Career direction & first moves", es: "Dirección de carrera y primeros movimientos" },
+    'plan1-point2': { en: "Skill-building priorities", es: "Prioridades de desarrollo de habilidades" },
+    'plan1-point3': { en: "Personal positioning from scratch", es: "Posicionamiento personal desde cero" },
+    'plan1-cta': { en: "Start as an Underdog →", es: "Empieza como Underdog →" },
+    'plan2-tag': { en: "For those in between jobs", es: "Para quienes están entre trabajos" },
+    'plan2-desc': { en: "For people without a job right now who are working to land one. A guide through the search — sharpening your story, targeting the right roles, and moving with intention until you land.", es: "Para personas que hoy no tienen trabajo y están buscando conseguir uno. Un guía a través de la búsqueda — afinando tu historia, apuntando a los roles correctos, y avanzando con intención hasta lograrlo." },
+    'plan2-point1': { en: "Job search strategy & targeting", es: "Estrategia de búsqueda y targeting" },
+    'plan2-point2': { en: "Positioning & narrative for interviews", es: "Posicionamiento y narrativa para entrevistas" },
+    'plan2-point3': { en: "Momentum until you land the offer", es: "Impulso hasta conseguir la oferta" },
+    'plan2-cta': { en: "Start as a Sherpa →", es: "Empieza con Sherpa →" },
+    'plan3-tag': { en: "For those ready to climb higher", es: "Para quienes están listos para subir de nivel" },
+    'plan3-desc': { en: "For experienced professionals with a job today who want to grow seniority and income. Strategic advisory to decide — and land — your next defining move.", es: "Para profesionales con experiencia que hoy tienen trabajo y quieren crecer en seniority e ingresos. Asesoría estratégica para decidir — y conseguir — tu próximo movimiento decisivo." },
+    'plan3-point1': { en: "Seniority & compensation growth", es: "Crecimiento en seniority y compensación" },
+    'plan3-point2': { en: "Strategic positioning for the next level", es: "Posicionamiento estratégico para el siguiente nivel" },
+    'plan3-point3': { en: "The full Level Up method, end to end", es: "El método completo de Level Up, de principio a fin" },
+    'plan3-cta': { en: "Start as an Executive →", es: "Empieza como Executive →" },
+
+    'faq-eyebrow': { en: "FAQ", es: "Preguntas Frecuentes" },
+    'faq-h': { en: "Common questions about career strategy.", es: "Preguntas comunes sobre estrategia de carrera." },
+    'faq-p': { en: "Straight answers to what experienced professionals usually ask before their first session.", es: "Respuestas directas a lo que los profesionales con experiencia suelen preguntar antes de su primera sesión." },
+    'faq1-q': { en: "What is executive career advisory?", es: "¿Qué es la asesoría estratégica de carrera ejecutiva?" },
+    'faq1-a': { en: "Executive career advisory is strategic work focused on deciding what your next career move should be — and how to position and execute it — rather than generic interview or resume coaching. It starts from your existing professional capital and maps the realistic paths it can open.", es: "La asesoría de carrera ejecutiva es trabajo estratégico enfocado en decidir cuál debería ser tu próximo movimiento de carrera — y cómo posicionarlo y ejecutarlo — en lugar de coaching genérico de entrevistas o currículum. Parte de tu capital profesional existente y mapea los caminos realistas que puede abrir." },
+    'faq2-q': { en: "How is career advisory different from career coaching?", es: "¿En qué se diferencia la asesoría de carrera del coaching de carrera?" },
+    'faq2-a': { en: "Career coaching typically helps with skills like interviewing, networking, or resume writing. Career strategy addresses an earlier question: which direction is worth pursuing at all. For experienced professionals, the harder problem is usually deciding, not executing.", es: "El coaching de carrera generalmente ayuda con habilidades como entrevistar, hacer networking, o escribir un currículum. La estrategia de carrera aborda una pregunta anterior: qué dirección vale la pena seguir. Para profesionales con experiencia, el problema más difícil suele ser decidir, no ejecutar." },
+    'faq3-q': { en: "Is it too late to change careers in your 40s or 50s?", es: "¿Es demasiado tarde para cambiar de carrera a los 40 o 50 años?" },
+    'faq3-a': { en: "Rarely, from a capability standpoint. What changes with experience is the type of transition that makes sense — a senior professional's accumulated expertise, network, results, and reputation usually transfers better through repositioning than through starting over.", es: "Rara vez, desde el punto de vista de capacidad. Lo que cambia con la experiencia es el tipo de transición que tiene sentido — el expertise, la red de contactos, los resultados y la reputación acumulados de un profesional senior suelen transferirse mejor mediante reposicionamiento que empezando de cero." },
+    'faq4-q': { en: "How can an executive transition into independent consulting?", es: "¿Cómo puede un ejecutivo transicionar a la consultoría independiente?" },
+    'faq4-a': { en: "The transition works best when it starts from a clear view of which parts of your operating experience are in demand as advisory value, not from repackaging a job title. That typically means defining a narrow expertise area, building a positioning narrative, and using an existing network before any market outreach.", es: "La transición funciona mejor cuando parte de una visión clara de qué partes de tu experiencia operativa tienen demanda como valor de advisory, no de reempacar un título de puesto. Eso normalmente significa definir un área de expertise concreta, construir una narrativa de posicionamiento, y usar una red existente antes de cualquier acercamiento al mercado." },
+    'faq5-q': { en: "How do executives find board or advisory positions?", es: "¿Cómo encuentran los ejecutivos posiciones de consejo o advisory?" },
+    'faq5-a': { en: "Board and advisory roles are rarely won through open applications — they're built through visible expertise, existing relationships, and a clear point of view in a specific domain. Combining an operating role with board or advisory work is often the realistic first step, rather than a full-time board career.", es: "Los roles de consejo y advisory rara vez se ganan mediante aplicaciones abiertas — se construyen a través de expertise visible, relaciones existentes, y un punto de vista claro en un dominio específico. Combinar un rol operativo con trabajo de consejo o advisory suele ser el primer paso realista, en lugar de una carrera de consejo a tiempo completo." },
+    'faq6-q': { en: "What should I do if my career has plateaued?", es: "¿Qué debo hacer si mi carrera se estancó?" },
+    'faq6-a': { en: "A plateau is often a career inflection point rather than a dead end: a moment where continuing on inertia has a real opportunity cost. The useful first step is mapping your accumulated professional capital and the options it currently supports, before deciding on a direction.", es: "Un estancamiento suele ser un punto de inflexión de carrera más que un callejón sin salida: un momento donde continuar por inercia tiene un costo de oportunidad real. El primer paso útil es mapear tu capital profesional acumulado y las opciones que actualmente sostiene, antes de decidir una dirección." },
+    'faq7-q': { en: "How do I identify which parts of my experience are transferable to a new industry?", es: "¿Cómo identifico qué partes de mi experiencia son transferibles a una nueva industria?" },
+    'faq7-a': { en: "Focus on what generalizes: leadership scope, the type of problems you've solved, and measurable results — rather than industry-specific terminology. Industry knowledge is real value, but it's rarely the only value a senior professional carries between sectors.", es: "Enfócate en lo que generaliza: el alcance de liderazgo, el tipo de problemas que has resuelto, y los resultados medibles — más que la terminología específica de la industria. El conocimiento de la industria es valor real, pero rara vez es el único valor que un profesional senior lleva entre sectores." },
+
+    'about-eyebrow': { en: "About", es: "Acerca de" },
+    'about-h': { en: "Who's behind Level Up", es: "Quién está detrás de Level Up" },
+    'about-p': { en: '[PLACEHOLDER — add the advisor\'s or team\'s name, professional background, relevant credentials, and location here. This is what lets both readers and AI systems evaluate the credibility of the advice on this site — see the "Missing Information" notes for what\'s needed.]', es: '[PLACEHOLDER — agrega aquí el nombre del/de la advisor o equipo, trayectoria profesional, credenciales relevantes y ubicación. Esto es lo que permite tanto a lectores como a sistemas de IA evaluar la credibilidad del contenido de este sitio — ver las notas de "Missing Information" para lo que falta.]' },
+
+    'next-track-h': { en: "The climax of your career story is unwritten.", es: "El clímax de tu historia profesional aún no está escrito." },
+    'player-eyebrow': { en: "Now Playing", es: "Reproduciendo Ahora" },
+    'player-h3': { en: "Your Next Chapter", es: "Tu Próximo Capítulo" },
+    'player-artist': { en: "Unknown destination", es: "Destino desconocido" },
+    'player-copy': { en: "You don't need to know exactly where you're going.<br>You need a better process for deciding.", es: "No necesitas saber exactamente hacia dónde vas.<br>Necesitas un mejor proceso para decidir." },
+    'next-track-cta': { en: "Start your career strategy →", es: "Inicia tu estrategia de carrera →" },
+
+    'cta-h': { en: "Your experience got you here.<br>Strategy determines what comes next.", es: "Tu experiencia te trajo hasta aquí.<br>La estrategia determina lo que sigue." },
+    'cta-p': { en: "One conversation to map the paths your career has already earned you.", es: "Una conversación para mapear los caminos que tu carrera ya te ha ganado." },
+    'cta-btn': { en: "Book a strategic career session", es: "Agenda una sesión estratégica de carrera" },
+
+    'footer-copy': { en: "Level Up Career Lab. Strategic career advisory for experienced professionals.", es: "Level Up Career Lab. Asesoría estratégica de carrera para profesionales con experiencia." },
+    'footer-reviewed': { en: "Content last reviewed: September 2026.", es: "Última revisión de contenido: septiembre de 2026." }
+  };
+
+  var langSwitch = document.getElementById('langSwitch');
+  var metaDescEl = document.querySelector('meta[name="description"]');
+  var i18nEls = document.querySelectorAll('[data-i18n]');
+
+  function applyLang(lang){
+    document.documentElement.lang = lang;
+    i18nEls.forEach(function(el){
+      var entry = I18N[el.getAttribute('data-i18n')];
+      if (!entry) return;
+      var value = entry[lang] || entry.en;
+      var attr = el.getAttribute('data-i18n-attr');
+      if (attr) el.setAttribute(attr, value);
+      else el.innerHTML = value;
+    });
+    document.title = I18N['_title'][lang];
+    if (metaDescEl) metaDescEl.setAttribute('content', I18N['_meta-description'][lang]);
+    if (langSwitch) langSwitch.setAttribute('data-active', lang);
+    try { localStorage.setItem('levelup-lang', lang); } catch(e){}
+  }
+
+  if (langSwitch){
+    langSwitch.addEventListener('click', function(){
+      var next = langSwitch.getAttribute('data-active') === 'en' ? 'es' : 'en';
+      applyLang(next);
+    });
+  }
+
+  (function initLang(){
+    var saved = null;
+    try { saved = localStorage.getItem('levelup-lang'); } catch(e){}
+    var browserLang = ((navigator.language || 'en').toLowerCase().indexOf('es') === 0) ? 'es' : 'en';
+    applyLang(saved === 'en' || saved === 'es' ? saved : browserLang);
+  })();
+
+  /* ---- Nav scroll state + mobile toggle ---- */
+  var nav = document.getElementById('siteNav');
+  var navLinks = document.getElementById('navLinks');
+  var navToggle = document.getElementById('navToggle');
+
+  function onScrollNav(){
+    if (window.scrollY > 12) nav.classList.add('is-scrolled');
+    else nav.classList.remove('is-scrolled');
+  }
+  onScrollNav();
+  window.addEventListener('scroll', onScrollNav, { passive:true });
+
+  navToggle.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      navLinks.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ---- Active link highlight ---- */
+  var sections = ['career','method','catalogue','who','plans','faq'].map(function(id){ return document.getElementById(id); });
+  var linkMap = {};
+  navLinks.querySelectorAll('a[href^="#"]').forEach(function(a){
+    linkMap[a.getAttribute('href').slice(1)] = a;
+  });
+  var navTicking = false;
+  function updateNavActive(){
+    navTicking = false;
+    var line = window.innerHeight * 0.45;
+    var current = null;
+    sections.forEach(function(s){
+      if (!s) return;
+      var rect = s.getBoundingClientRect();
+      if (rect.top <= line && rect.bottom >= line) current = s.id;
+    });
+    Object.keys(linkMap).forEach(function(id){
+      linkMap[id].classList.toggle('is-active', id === current);
+    });
+  }
+  updateNavActive();
+  window.addEventListener('scroll', function(){
+    if (!navTicking){ requestAnimationFrame(updateNavActive); navTicking = true; }
+  }, { passive:true });
+  window.addEventListener('resize', updateNavActive);
+
+  /* ---- Top scroll progress bar ---- */
+  var fill = document.getElementById('scrollFill');
+  var ticking = false;
+  function updateProgress(){
+    var doc = document.documentElement;
+    var scrollable = doc.scrollHeight - doc.clientHeight;
+    var progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+    fill.style.width = progress + '%';
+    ticking = false;
+  }
+  updateProgress();
+  window.addEventListener('scroll', function(){
+    if (!ticking){ requestAnimationFrame(updateProgress); ticking = true; }
+  }, { passive:true });
+  window.addEventListener('resize', updateProgress);
+
+  /* ---- Reveal on scroll ---- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion){
+    var revealObserver = new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.15, rootMargin:'0px 0px -8% 0px' });
+    revealEls.forEach(function(el){ revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* ---- Animated counters ---- */
+  var counters = document.querySelectorAll('[data-counter]');
+  function animateCounter(el){
+    var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+    if (reduceMotion){ el.textContent = target; return; }
+    var start = performance.now();
+    var duration = 1200;
+    function tick(now){
+      var t = Math.min(1, (now - start) / duration);
+      var eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(eased * target);
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  if ('IntersectionObserver' in window){
+    var counterObserver = new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          animateCounter(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.4 });
+    counters.forEach(function(el){ counterObserver.observe(el); });
+  } else {
+    counters.forEach(function(el){ el.textContent = el.getAttribute('data-target'); });
+  }
+
+  /* ---- Method sticky storytelling ----
+     Driven by scroll position (closest step to a reference line) rather than
+     IntersectionObserver thresholds: on a fast flick/scrollbar-drag scroll,
+     steps can jump straight past a threshold window and the rail goes stale.
+     A full recompute on every frame is immune to scroll speed. */
+  var methodSteps = document.querySelectorAll('.method-step');
+  var railItems = document.querySelectorAll('#methodRail li');
+  var methodScroller = document.querySelector('.method-scroller');
+  if (methodSteps.length && methodScroller){
+    var mTicking = false;
+    function updateMethodActive(){
+      mTicking = false;
+      var scrollerRect = methodScroller.getBoundingClientRect();
+      if (scrollerRect.bottom < 0 || scrollerRect.top > window.innerHeight) return;
+      var line = window.innerHeight * 0.45;
+      var activeIndex = 0;
+      var bestDist = Infinity;
+      methodSteps.forEach(function(step, i){
+        var rect = step.getBoundingClientRect();
+        var dist = Math.abs((rect.top + rect.bottom) / 2 - line);
+        if (dist < bestDist){ bestDist = dist; activeIndex = i; }
+      });
+      methodSteps.forEach(function(s, i){ s.classList.toggle('is-active', i === activeIndex); });
+      railItems.forEach(function(r, i){ r.classList.toggle('is-active', i === activeIndex); });
+    }
+    updateMethodActive();
+    window.addEventListener('scroll', function(){
+      if (!mTicking){ requestAnimationFrame(updateMethodActive); mTicking = true; }
+    }, { passive:true });
+    window.addEventListener('resize', updateMethodActive);
+  }
+
+  /* ---- Subtle parallax on hero visual ---- */
+  var heroVisual = document.querySelector('.hero-visual');
+  if (heroVisual && !reduceMotion){
+    var pTicking = false;
+    function updateParallax(){
+      var rect = heroVisual.getBoundingClientRect();
+      var offset = rect.top * 0.06;
+      heroVisual.style.transform = 'translateY(' + offset + 'px)';
+      pTicking = false;
+    }
+    window.addEventListener('scroll', function(){
+      if (!pTicking){ requestAnimationFrame(updateParallax); pTicking = true; }
+    }, { passive:true });
+  }
+})();
+</script>
+
+</body>
+</html>
